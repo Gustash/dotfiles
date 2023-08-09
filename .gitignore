@@ -1,0 +1,4 @@
+# Dotter
+.dotter/local.toml
+.dotter/cache.toml
+.dotter/cache

@@ -1,0 +1,69 @@
+[dunst.files]
+dunstrc = "~/.config/dunst/dunstrc"
+
+[fish.files]
+fish = "~/.config/fish/config.fish"
+fish_plugins = "~/.config/fish/fish_plugins"
+
+[gamemode.files]
+gamemode = "~/.config/gamemode.ini"
+gamemode_hooks = "~/.config/gamemode/"
+
+[gtk3.files]
+gtk-3.0 = "~/.config/gtk-3.0/"
+
+[gtk4.files]
+gtk-4.0 = "~/.config/gtk-4.0/settings.ini"
+
+[hyprland.files]
+hypr = "~/.config/hypr/"
+
+[hyprland-autoname-workspaces.files]
+hyprland-autoname-workspaces = "~/.config/hyprland-autoname-workspaces/config.toml"
+
+[kitty.files]
+kitty = "~/.config/kitty/kitty.conf"
+
+[MangoHud.files]
+MangoHud = "~/.config/MangoHud/MangoHud.conf"
+
+[OpenRGB.files]
+OpenRGB = "~/.config/OpenRGB/"
+
+[qutebrowser.files]
+qutebrowser = "~/.config/qutebrowser/"
+
+[replay-sorcery.files]
+replay-sorcery = "~/.config/replay-sorcery.conf"
+
+[rofi.files]
+rofi = "~/.config/rofi/config.rasi"
+
+[scripts.files]
+"scripts/start_animated_backgrounds" = "~/.local/bin/start_animated_backgrounds"
+
+[spicetify.files]
+spicetify = "~/.config/spicetify/config-xpui.ini"
+
+[sway.files]
+sway = "~/.config/sway/config"
+
+[swayidle.files]
+swayidle = "~/.config/swayidle/config"
+
+[swaylock.files]
+swaylock = "~/.config/swaylock/config"
+"swaylock_scripts/lock-with-idle" = "~/.config/swaylock/lock-with-idle"
+"swaylock_scripts/prepare_background" = "~/.config/swaylock/prepare_background"
+"swaylock_scripts/hyprland-lock" = "~/.local/bin/hyprland-lock"
+
+[swaync.files]
+swaync = "~/.config/swaync/"
+
+[waybar.files]
+waybar = "~/.config/waybar/"
+# Don't forget to add weather_api_key to [waybar.variables] in local.toml
+
+[xdg-desktop-portal-wlr.files]
+xdg-desktop-portal-wlr = "~/.config/xdg-desktop-portal-wlr/config"
+

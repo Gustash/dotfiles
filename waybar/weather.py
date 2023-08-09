@@ -4,7 +4,7 @@ import requests
 import json
 from datetime import datetime
 
-API_KEY = '{{API_KEY}}'
+API_KEY = '{{weather_api_key}}'
 FORECAST_ENDPOINT = f'http://api.openweathermap.org/data/2.5/forecast?appid={API_KEY}'
 CURRENT_WEATHER_ENDPOINT = f'http://api.openweathermap.org/data/2.5/weather?appid={API_KEY}'
 
