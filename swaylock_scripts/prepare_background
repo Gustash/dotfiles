@@ -1,0 +1,20 @@
+#!/usr/bin/env sh
+set -e
+
+image="/tmp/wallengine.jpeg"
+# Crop the image into two halves
+magick mogrify -crop 50%x100% +repage -quality 100 "${image}"
+# Initialize array with output filenames
+files=($(ls -d /tmp/* | grep '^/tmp/wallengine-[0-9]\+\.jpeg$'))
+
+# Then, blur both images
+# magick mogrify -blur 0x15 "${files[@]}" 
+
+# Start an index for looping over each image file
+i=0
+# Loop over every output and rename the halved images to contain the output name
+# outputs=($(swaymsg -t get_outputs -r | jq -rc '.[].name'))
+outputs=($(hyprctl monitors -j | jq -rc '.[].name'))
+for ((i=0; i<${#outputs[@]}; i++)); do
+  mv "${files[$i]}" "/tmp/swaylock-${outputs[$i]}.jpeg"
+done

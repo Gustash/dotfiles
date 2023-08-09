@@ -1,0 +1,272 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 30,
+  "spacing": 0,
+  "modules-left": [
+    "wlr/workspaces",
+    "gamemode",
+    "sway/window",
+    "sway/mode",
+    "hyprland/submap",
+    "custom/media"
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "custom/weather",
+    "disk#root",
+    "custom/temperature#nvme",
+    "disk#data",
+    "network",
+    "cpu",
+    "temperature#cpu",
+    "custom/gpu",
+    "temperature#gpu",
+    "memory",
+    "pulseaudio",
+    "tray",
+    "clock",
+    "custom/notification"
+  ],
+  "keyboard-state": {
+    "numlock": true,
+    "capslock": true,
+    "format": "{name} {icon}",
+    "format-icons": {
+      "locked": "",
+      "unlocked": ""
+    }
+  },
+  "wlr/workspaces": {
+    "format": "{name}",
+    "active-only": false,
+    "on-click": "activate"
+  },
+  "hyprland/window": {
+      "separate-outputs": true
+  },
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "hyprland/submap": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+  "mpd": {
+    "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+    "format-disconnected": "Disconnected",
+    "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+    "unknown-tag": "N/A",
+    "interval": 2,
+    "consume-icons": {
+      "on": " "
+    },
+    "random-icons": {
+      "off": "<span color=\"#f53c3c\"></span> ",
+      "on": " "
+    },
+    "repeat-icons": {
+      "on": " "
+    },
+    "single-icons": {
+      "on": "1 "
+    },
+    "state-icons": {
+      "paused": "",
+      "playing": ""
+    },
+    "tooltip-format": "MPD (connected)",
+    "tooltip-format-disconnected": "MPD (disconnected)"
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+  "cpu": {
+    "format": " {usage:3}%",
+    "tooltip": false
+  },
+  "custom/gpu": {
+    "exec": "$HOME/.config/waybar/gpu_usage",
+    "return-type": "json",
+    "interval": 1,
+    "format": " {percentage:3}%",
+    "tooltip": false
+  },
+  "gamemode": {
+    "format": "{glyph}",
+    "hide-not-running": true,
+    "icon-size": 0,
+    "glyph": "",
+    "use-icon": false
+  },
+  "memory": {
+    "format": " {}%"
+  },
+  "disk#root": {
+    "format": " {percentage_used}%",
+    "path": "/"
+  },
+  "disk#home": {
+    "format": " {percentage_used}%",
+    "path": "/home"
+  },
+  "disk#data": {
+    "format": " {percentage_used}%",
+    "path": "/mnt/hdd"
+  },
+  "temperature#cpu": {
+    "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
+    "input-filename": "temp1_input",
+    "critical-threshold": 80,
+    "format": " •{temperatureC:3}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "temperature#gpu": {
+    "hwmon-path-abs": "/sys/class/drm/renderD128/device/hwmon",
+    "input-filename": "temp1_input",
+    "critical-threshold": 110,
+    "format": " •{temperatureC:3}°C",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "custom/temperature#nvme": {
+      "exec": "sudo nvme smart-log /dev/nvme0 -o json | jq '.temperature - 273.15 | round'",
+      "interval": 10,
+      "format": " • {}°C",
+      "tooltip": false
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "   {bandwidthDownBits:>}  {bandwidthUpBits:>}",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "custom/media": {
+    "format": "{icon} {}",
+    "return-type": "json",
+    "max-length": 40,
+    "format-icons": {
+      "spotify": "",
+      "default": "🎜"
+    },
+    "escape": true,
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+  },
+  "custom/dnd": {
+    "exec": "$HOME/.config/waybar/check_dnd",
+    "return-type": "json",
+    "on-click": "swaync-client -d",
+    "interval": 1
+  },
+  "custom/weather": {
+    "exec": "$HOME/.config/waybar/weather.py",
+    "interval": 60,
+    "return-type": "json",
+    "format": "{icon} {}°C",
+    "format-icons": {
+      "01d": "",
+      "01n": "",
+      "02d": "",
+      "02n": "",
+      "03d": "",
+      "03n": "",
+      "04d": "",
+      "04n": "",
+      "09d": "",
+      "09n": "",
+      "10d": "",
+      "10n": "",
+      "11d": "",
+      "11n": "",
+      "13d": "",
+      "13n": "",
+      "50d": "",
+      "50n": ""
+    },
+    "tooltip": "{tooltip}"
+  },
+  "custom/update": {
+    "exec": "$HOME/.config/waybar/check_updates",
+    "exec-if": "paru -Qu || flatpak remote-ls --updates",
+    "return-type": "json",
+    "on-click": "kitty --hold paru; kitty --hold flatpak update; pkill -SIGRTMIN+8 waybar",
+    "signal": 8,
+    "interval": 1800
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+}

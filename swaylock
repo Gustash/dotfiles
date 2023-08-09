@@ -1,0 +1,18 @@
+image=DP-1:/tmp/swaylock-DP-1.jpeg
+image=DP-2:/tmp/swaylock-DP-2.jpeg
+scaling=fill
+effect-blur=7x5
+clock
+indicator
+datestr=%a, %d %b %y
+font=Ubuntu Nerd Font
+font-size=36
+indicator-radius=100
+ring-color=eebebe
+ring-clear-color=ef9f76
+ring-wrong-color=e78284
+ring-ver-color=8caaee
+text-color=c6d0f5
+text-ver-color=c6d0f5
+text-wrong-color=c6d0f5
+text-clear-color=303446

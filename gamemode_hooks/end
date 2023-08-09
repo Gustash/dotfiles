@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+
+FILE=./initial_state
+if [ -f "$FILE" ]; then
+  # Set dnd status back to original state
+  if grep -q "true" "${FILE}"; then
+      swaync-client -dn
+  else
+      swaync-client -df
+  fi
+  rm "$FILE"
+fi

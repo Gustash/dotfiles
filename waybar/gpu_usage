@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+usage=$(cat /sys/class/drm/renderD128/device/gpu_busy_percent)
+echo -e "{\"percentage\": $usage}"

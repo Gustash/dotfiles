@@ -1,0 +1,2 @@
+# Lock before going to sleep
+before-sleep '$HOME/.config/swaylock/lock-with-idle'

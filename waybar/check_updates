@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Check how many updates are available with paru
+AUR_UPDATES=$(paru -Qu | wc -l)
+# Check how many updates are available with flatpak
+FLATPAK_UPDATES=$(flatpak remote-ls --updates | wc -l)
+
+AUR_LABEL=""
+SEPARATOR=""
+FLATPAK_LABEL=""
+
+if [[ ${AUR_UPDATES} > 0 ]]; then
+    AUR_LABEL=" ${AUR_UPDATES}"
+fi
+
+if [[ ${FLATPAK_UPDATES} > 0 ]]; then
+    FLATPAK_LABEL=" ${FLATPAK_UPDATES}"
+fi
+
+if [[ ${AUR_UPDATES} > 0 && ${FLATPAK_UPDATES} > 0 ]]; then
+    SEPARATOR="  "
+fi
+
+TOOLTIP="${AUR_UPDATES} packages out-of-date\n${FLATPAK_UPDATES} flatpaks out-of-date"
+
+printf "{\"text\": \"%s%s%s\", \"tooltip\": \"%s\"}\n" \
+    "${AUR_LABEL}" "${SEPARATOR}" "${FLATPAK_LABEL}" "${TOOLTIP}"

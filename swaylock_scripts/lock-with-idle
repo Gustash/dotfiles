@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+# Prepare background before locking
+$(dirname -- "${BASH_SOURCE[0]}")/prepare_background
+
+# Turn off screen every 5 seconds of inactivity
+swayidle -w timeout 5 'swaymsg "output * dpms off"' \
+            resume 'swaymsg "output * dpms on"' &
+# Immeditelly lock screen and wait for unlock
+swaylock
+# After unlock, kill swayidle
+pkill --newest swayidle

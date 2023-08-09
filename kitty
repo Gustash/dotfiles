@@ -1,0 +1,16 @@
+globinclude kitty.d/**/*.conf
+envinclude KITTY_CONF_*
+
+include themes/macchiato.conf 
+background_opacity    0.85
+cursor_shape          block
+cursor_beam_thickness 8
+scrollback_lines      -1
+enable_audio_bell     no
+
+font_family      JetBrainsMono Nerd
+bold_font        JetBrainsMono Nerd Bold
+italic_font      JetBrainsMono Nerd Italic
+bold_italic_font JetBrainsMono Nerd Bold Italic
+
+font_size 12.0

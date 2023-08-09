@@ -1,0 +1,9 @@
+#!/usr/bin/sh
+
+FILE=./initial_state
+if ! [ -f "$FILE" ]; then
+  # Save initial dnd state
+  swaync-client -D >> ./initial_state
+  # Enable dnd for gaming session
+  swaync-client -dn
+fi

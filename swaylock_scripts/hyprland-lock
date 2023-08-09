@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+# Prepare background before locking
+$HOME/.config/swaylock/prepare_background
+
+# Turn off screen every 5 seconds of inactivity
+swayidle -C ~/.config/hypr/swayidle/config \
+         -w timeout 5 'hyprctl dispatch dpms off' \
+            resume 'hyprctl dispatch dpms on' &
+# Immeditelly lock screen and wait for unlock
+swaylock
+# After unlock, kill swayidle
+pkill --newest swayidle

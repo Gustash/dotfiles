@@ -1,0 +1,268 @@
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Roboto Mono Thin", "Font Awesome 6 Free";
+  font-size: 14px;
+  min-height: 24px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 26px;
+  transition: none;
+}
+
+window#waybar.empty #window,
+window#waybar #window.empty {
+  color: transparent;
+  background: transparent;
+  margin-top: 0;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+window#waybar #window {
+  color: #4d4d4d;
+  background: #e6e6e6;
+}
+
+#workspaces {
+  margin-top: 8px;
+  margin-left: 12px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  background: #282a36;
+  transition: none;
+}
+
+#workspaces button {
+  transition: none;
+  color: #f8f8f2;
+  background: transparent;
+  font-size: 16px;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  color: #eebebe;
+}
+
+#workspaces button.urgent {
+  color: #faab78;
+}
+
+#workspaces button:hover {
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #ff79c6;
+}
+
+#mpd,
+#disk {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  background: #282a36;
+  transition: none;
+  color: #4d4d4d;
+  background: #5af78e;
+}
+
+#disk, #custom-temperature.nvme {
+  margin-top: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 0;
+  margin-left: 0;
+  border-radius: 0;
+  background: #282a36;
+  transition: none;
+  color: #4d4d4d;
+  background: #5af78e;
+}
+
+#disk.root {
+  border-radius: 26px 0 0 26px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 0;
+}
+
+#custom-temperature.nvme {
+    padding-left: 0;
+}
+
+#disk.data {
+  border-radius: 0 26px 26px 0;
+  padding-right: 16px;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+  color: #f8f8f2;
+  background: #282a36;
+}
+
+#network {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #4d4d4d;
+  background: #bd93f9;
+}
+
+#pulseaudio {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #4d4d4d;
+  background: #9aedfe;
+}
+
+#temperature {
+  margin-top: 8px;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 0 26px 26px 0;
+  transition: none;
+  color: #4d4d4d;
+  background: #f1fa8c;
+}
+
+#cpu,
+#custom-gpu {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 0;
+  margin-bottom: 0;
+  border-radius: 26px 0 0 26px;
+  transition: none;
+  color: #4d4d4d;
+  background: #f1fa8c;
+}
+
+#memory {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #4d4d4d;
+  background: #fd8a8a;
+}
+
+#mode, #submap {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #4d4d4d;
+  background: #ff6e67;
+}
+
+#clock,
+#tray,
+#custom-notification {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #f8f8f2;
+  background: #282a36;
+}
+
+#tray {
+  border-radius: 26px 0 0 26px;
+  padding-right: 0;
+}
+
+#clock {
+  border-radius: 0;
+  margin-right: 0;
+  padding-right: 0;
+  margin-left: 0;
+}
+
+#custom-notification {
+  font-family: "Symbols Nerd Font Mono";
+  border-radius: 0 26px 26px 0;
+  margin-left: 0;
+  margin-right: 12px;
+}
+
+#custom-weather {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #4d4d4d;
+  background: #f2d8d8;
+  font-family: "Roboto Mono Thin", "Weather Icons";
+}
+
+#custom-update {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #f8f8f2;
+  background: #374259;
+}
+
+#gamemode,
+#custom-dnd {
+  margin-top: 8px;
+  margin-left: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 0;
+  border-radius: 26px;
+  transition: none;
+  color: #f8f8f2;
+  background: #85586f;
+}
+
+#gamemode {
+  padding-left: 14px;
+}

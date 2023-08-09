@@ -1,0 +1,18 @@
+#!/usr/bin/sh
+
+set -e
+ICON=""
+
+while getopts a:i: option
+do
+	case "${option}"
+		in
+		a)ACTIVE_COLOR=${OPTARG};;
+		i)INACTIVE_COLOR=${OPTARG};;
+	esac
+done
+
+if [[ $(swaync-client -D) = "true" ]]
+then
+	echo "{\"text\": \"$ICON\", \"class\": \"active\", \"tooltip\": \"Notifications Paused\"}"
+fi

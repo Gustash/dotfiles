@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+killall linux-wallpaperengine
+
+#linux-wallpaperengine -r DP-1 -b 1268947477 \
+#                      -r DP-2 -b 2862012367 \
+#                      -f 15 --screenshot /tmp/wallengine.jpeg
+linux-wallpaperengine -r DP-1 -b 2164591875 \
+                      -r DP-2 -b 2927308359 \
+                      --silent \
+                      --screenshot /tmp/wallengine.jpeg
