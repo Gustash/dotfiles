@@ -1,6 +1,9 @@
 [dunst.files]
 dunstrc = "~/.config/dunst/dunstrc"
 
+[fish]
+depends = ["profile"]
+
 [fish.files]
 fish = "~/.config/fish/config.fish"
 fish_plugins = "~/.config/fish/fish_plugins"
@@ -17,6 +20,7 @@ gamemode_hooks = { target = "~/.config/gamemode", type = "symbolic", recurse = t
 
 [hyprland.files]
 hypr = { target = "~/.config/hypr", type = "symbolic", recurse = true }
+"scripts/start_animated_backgrounds" = "~/.local/bin/start_animated_backgrounds"
 
 [hyprland-autoname-workspaces.files]
 hyprland-autoname-workspaces = "~/.config/hyprland-autoname-workspaces/config.toml"
@@ -30,6 +34,9 @@ MangoHud = "~/.config/MangoHud/MangoHud.conf"
 [OpenRGB.files]
 OpenRGB = { target = "~/.config/OpenRGB", type = "symbolic", recurse = true }
 
+[profile.files]
+".profile" = "~/.profile"
+
 [qutebrowser.files]
 qutebrowser = { target = "~/.config/qutebrowser", type = "symbolic", recurse = true }
 
@@ -38,9 +45,6 @@ replay-sorcery = "~/.config/replay-sorcery.conf"
 
 [rofi.files]
 rofi = "~/.config/rofi/config.rasi"
-
-[scripts.files]
-"scripts/start_animated_backgrounds" = "~/.local/bin/start_animated_backgrounds"
 
 [spicetify.files]
 spicetify = "~/.config/spicetify/config-xpui.ini"
