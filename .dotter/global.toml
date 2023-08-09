@@ -7,16 +7,16 @@ fish_plugins = "~/.config/fish/fish_plugins"
 
 [gamemode.files]
 gamemode = "~/.config/gamemode.ini"
-gamemode_hooks = "~/.config/gamemode/"
+gamemode_hooks = { target = "~/.config/gamemode", type = "symbolic", recurse = true }
 
 [gtk3.files]
-gtk-3.0 = "~/.config/gtk-3.0/"
+"gtk-3.0" = { target = "~/.config/gtk-3.0", type = "symbolic", recurse = true }
 
 [gtk4.files]
-gtk-4.0 = "~/.config/gtk-4.0/settings.ini"
+"gtk-4.0" = "~/.config/gtk-4.0/settings.ini"
 
 [hyprland.files]
-hypr = "~/.config/hypr/"
+hypr = { target = "~/.config/hypr", type = "symbolic", recurse = true }
 
 [hyprland-autoname-workspaces.files]
 hyprland-autoname-workspaces = "~/.config/hyprland-autoname-workspaces/config.toml"
@@ -28,10 +28,10 @@ kitty = "~/.config/kitty/kitty.conf"
 MangoHud = "~/.config/MangoHud/MangoHud.conf"
 
 [OpenRGB.files]
-OpenRGB = "~/.config/OpenRGB/"
+OpenRGB = { target = "~/.config/OpenRGB", type = "symbolic", recurse = true }
 
 [qutebrowser.files]
-qutebrowser = "~/.config/qutebrowser/"
+qutebrowser = { target = "~/.config/qutebrowser", type = "symbolic", recurse = true }
 
 [replay-sorcery.files]
 replay-sorcery = "~/.config/replay-sorcery.conf"
@@ -58,12 +58,12 @@ swaylock = "~/.config/swaylock/config"
 "swaylock_scripts/hyprland-lock" = "~/.local/bin/hyprland-lock"
 
 [swaync.files]
-swaync = "~/.config/swaync/"
+swaync = { target = "~/.config/swaync", type = "symbolic", recurse = true }
 
 [waybar.files]
-waybar = "~/.config/waybar/"
-# Don't forget to add weather_api_key to [waybar.variables] in local.toml
+waybar = { target = "~/.config/waybar", type = "symbolic", recurse = true }
+"waybar/weather.py" = { target = "~/.config/waybar/weather.py", type = "template" }
+# Don't forget to add weather_api_key to [variables] in local.toml
 
 [xdg-desktop-portal-wlr.files]
 xdg-desktop-portal-wlr = "~/.config/xdg-desktop-portal-wlr/config"
-
