@@ -1,3 +1,6 @@
+[bwmenu.files]
+"scripts/bwmenu" = "~/.local/bin/bwmenu"
+
 [dunst.files]
 dunstrc = "~/.config/dunst/dunstrc"
 
