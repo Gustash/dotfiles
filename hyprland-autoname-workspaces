@@ -1,21 +1,21 @@
-version = "1.1.6"
+version = "1.1.7"
 
 [class]
-"(?i)steam" = ""
-"(?i)Kitty" = ""
-"(?i)com.obsproject.Studio" = ""
-"(?i)lutris" = ""
-"(?i)whatsapp-*" = ""
 DEFAULT = " "
-"(?i)thunar" = ""
-"(?i)gnome-boxes" = ""
-"(?i)web(?i)cord" = ""
-"[Ff]irefox" = ""
 "(?i)spotify" = ""
-"(?i)com.usebottles.bottles" = ""
-code-oss = ""
+"(?i)lutris" = ""
+"[Ff]irefox" = ""
+"(?i)Kitty" = ""
 "(?i)heroic" = ""
 "(?i)waydroid.*" = "droid"
+"(?i)thunar" = ""
+"(?i)com.obsproject.Studio" = ""
+"(?i)gnome-boxes" = ""
+"(?i)web(?i)cord" = ""
+"(?i)com.usebottles.bottles" = ""
+"(?i)steam" = ""
+"(?i)whatsapp-*" = ""
+code-oss = ""
 
 [class_active]
 DEFAULT = "<span color='#eebebe'>{icon}</span>"
@@ -27,23 +27,26 @@ DEFAULT = "{class}"
 DEFAULT = "<span color='#eebebe'>{class}</span>"
 
 [workspaces_name]
-10 = "ten"
-5 = "five"
-6 = "six"
-2 = "two"
-9 = "nine"
-0 = "zero"
-4 = "four"
-8 = "eight"
 1 = "one"
+10 = "ten"
+0 = "zero"
+5 = "five"
+9 = "nine"
+8 = "eight"
+2 = "two"
 7 = "seven"
+6 = "six"
+4 = "four"
 3 = "three"
-
-[title_in_class."(?i)kitty"]
-"(?i)neomutt" = "neomutt"
 
 [title_in_class."(?i)firefox"]
 "(?i)mozilla firefox private browsing" = ""
+
+[title_in_class."(?i)kitty"]
+"(?i)neomutt" = "neomutt"
+"(?i)vim" = ""
+"(?i)tig" = ""
+"(?i)git" = ""
 
 [title_in_class_active."(?i)firefox"]
 
@@ -61,9 +64,9 @@ DEFAULT = "<span color='#eebebe'>{class}</span>"
 
 [exclude]
 "" = "^$"
-"(?i)fcitx" = ".*"
 "(?i)TestApp" = ""
 "[Ss]team" = "^$"
+"(?i)fcitx" = ".*"
 aProgram = "^$"
 
 [format]
