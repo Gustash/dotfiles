@@ -4,7 +4,7 @@
   "height": 30,
   "spacing": 0,
   "modules-left": [
-    "wlr/workspaces",
+    "hyprland/workspaces",
     "gamemode",
     "sway/window",
     "sway/mode",
@@ -24,10 +24,12 @@
     "temperature#gpu",
     "memory",
     "pulseaudio",
-    "tray",
-    "clock",
-    "custom/notification"
+    "group/systray"
   ],
+  "group/systray": {
+    "orientation": "inherit",
+    "modules": ["tray", "clock", "custom/notification"]
+  },
   "keyboard-state": {
     "numlock": true,
     "capslock": true,
@@ -37,7 +39,7 @@
       "unlocked": ""
     }
   },
-  "wlr/workspaces": {
+  "hyprland/workspaces": {
     "format": "{name}",
     "active-only": false,
     "on-click": "activate"

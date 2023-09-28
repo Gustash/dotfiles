@@ -84,7 +84,8 @@ window#waybar #window {
   background: #5af78e;
 }
 
-#disk, #custom-temperature.nvme {
+#disk,
+#custom-temperature.nvme {
   margin-top: 8px;
   padding-left: 8px;
   padding-right: 8px;
@@ -105,7 +106,7 @@ window#waybar #window {
 }
 
 #custom-temperature.nvme {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 #disk.data {
@@ -180,7 +181,8 @@ window#waybar #window {
   background: #fd8a8a;
 }
 
-#mode, #submap {
+#mode,
+#submap {
   margin-top: 8px;
   margin-left: 8px;
   padding-left: 16px;
@@ -192,37 +194,32 @@ window#waybar #window {
   background: #ff6e67;
 }
 
-#clock,
-#tray,
-#custom-notification {
-  margin-top: 8px;
-  margin-left: 8px;
-  padding-left: 16px;
-  padding-right: 16px;
-  margin-bottom: 0;
+#systray {
+  margin: 8px 12px 0 8px;
   border-radius: 26px;
   transition: none;
-  color: #f8f8f2;
   background: #282a36;
 }
 
+#clock,
+#tray,
+#custom-notification {
+  color: #f8f8f2;
+  margin-left: 16px;
+  margin-right: 16px;
+  transition: none;
+}
+
 #tray {
-  border-radius: 26px 0 0 26px;
-  padding-right: 0;
+  margin-right: 0;
 }
 
 #clock {
-  border-radius: 0;
   margin-right: 0;
-  padding-right: 0;
-  margin-left: 0;
 }
 
 #custom-notification {
   font-family: "Symbols Nerd Font Mono";
-  border-radius: 0 26px 26px 0;
-  margin-left: 0;
-  margin-right: 12px;
 }
 
 #custom-weather {
