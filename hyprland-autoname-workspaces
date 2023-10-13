@@ -15,6 +15,7 @@ DEFAULT = " "
 "(?i)com.usebottles.bottles" = ""
 "(?i)steam" = ""
 "(?i)whatsapp-*" = ""
+"(?i)seahorse" = ""
 code-oss = ""
 
 [class_active]
