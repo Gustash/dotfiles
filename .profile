@@ -1,4 +1,4 @@
-export TERMINAL=/usr/bin/kitty
+export TERMINAL=/usr/bin/alacritty
 # export QT_QPA_PLATFORMTHEME=qt5ct
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
