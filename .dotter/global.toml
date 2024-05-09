@@ -74,3 +74,6 @@ waybar = { target = "~/.config/waybar", type = "symbolic", recurse = true }
 
 [xdg-desktop-portal-wlr.files]
 xdg-desktop-portal-wlr = "~/.config/xdg-desktop-portal-wlr/config"
+
+[tmux.files]
+tmux = "~/.tmux.conf"
