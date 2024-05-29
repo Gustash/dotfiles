@@ -8,6 +8,7 @@ export HYPRSHOT_DIR=$XDG_PICTURES_DIR/Screenshots
 export SWAY_SCREENSHOT_DIR=$XDG_PICTURES_DIR/Screenshots 
 
 alias discord='discord --ignore-gpu-blocklist --enable-features=UseOzonePlatform,VaapiVideoDecoder,WebRTCPipeWireCapturer --use-gl=desktop --enable-gpu-rasterization --enable-zero-copy --no-sandbox --ozone-platform=wayland'
+alias docker='podman'
 
 # Make sure the obs-vkcapture Vulkan layer loads before MangoHUD and Steam Overlay so they aren't captured in OBS
 export VK_LOADER_LAYERS_ENABLE=VK_LAYER_OBS_vkcapture_64,VK_LAYER_MANGOHUD_overlay,VK_LAYER_VALVE_steam_overlay_64
