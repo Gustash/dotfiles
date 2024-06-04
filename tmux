@@ -1,5 +1,5 @@
 # set default shell to fish
-set -g default-shell /usr/bin/fish
+set -g default-shell {{command_output "which fish"}}
 
 # remap prefix from 'C-b' to 'C-a'
 unbind C-b
